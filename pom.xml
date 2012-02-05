@@ -7,21 +7,19 @@
     </parent>
     <groupId>com.github.rtyley</groupId>
     <artifactId>android-screenshot-parent</artifactId>
+    <version>1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>paparazzo</module>
         <module>celebrity</module>
     </modules>
-    <version>1.1-SNAPSHOT</version>
     <inceptionYear>2012</inceptionYear>
-
     <name>Android Screenshot library - parent pom</name>
-
-    <issueManagement>
-        <url>https://github.com/rtyley/android-screenshot-lib/issues</url>
-        <system>GitHub Issues</system>
-    </issueManagement>
-
+    <description>
+        Parent pom for 'Android Screenshot library', a library intended to provide
+        on-demand screenshots during Android integration tests.
+    </description>
+    <url>https://github.com/rtyley/android-screenshot-lib</url>
     <licenses>
         <license>
             <name>Apache V2</name>
@@ -29,13 +27,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-
     <scm>
         <url>https://github.com/rtyley/android-screenshot-lib</url>
         <connection>scm:git:git://github.com/rtyley/android-screenshot-lib.git</connection>
         <developerConnection>scm:git:git@github.com:rtyley/android-screenshot-lib.git</developerConnection>
     </scm>
-
     <developers>
         <developer>
             <email>roberto@github.com</email>
@@ -44,7 +40,11 @@
             <id>rtyley</id>
         </developer>
     </developers>
-
+    
+    <issueManagement>
+        <url>https://github.com/rtyley/android-screenshot-lib/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
