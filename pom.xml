@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <groupId>com.github.rtyley</groupId>
+    <artifactId>android-screenshot-parent</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>paparazzo</module>
+        <module>celebrity</module>
+    </modules>
+    <version>1.0-SNAPSHOT</version>
+    <inceptionYear>2012</inceptionYear>
+
+    <name>Android Screenshot library - parent pom</name>
+
+    <issueManagement>
+        <url>https://github.com/rtyley/android-screenshot-lib/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>Apache V2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/rtyley/android-screenshot-lib</url>
+        <connection>scm:git:git://github.com/rtyley/android-screenshot-lib.git</connection>
+        <developerConnection>scm:git:git@github.com:rtyley/android-screenshot-lib.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <email>roberto@github.com</email>
+            <name>Roberto Tyley</name>
+            <url>https://github.com/rtyley</url>
+            <id>rtyley</id>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
