@@ -12,7 +12,7 @@
         <module>paparazzo</module>
         <module>celebrity</module>
     </modules>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <inceptionYear>2012</inceptionYear>
 
     <name>Android Screenshot library - parent pom</name>
