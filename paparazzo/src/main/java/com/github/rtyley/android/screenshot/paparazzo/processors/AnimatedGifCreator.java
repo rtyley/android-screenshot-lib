@@ -7,26 +7,26 @@ import java.util.Map;
 
 public class AnimatedGifCreator implements ScreenshotProcessor {
 
-    private final AnimatedGifEncoder animatedGifEncoder;
+    private final AnimatedGifEncoder gifEncoder;
     private final File file;
 
     public AnimatedGifCreator(File file) {
         this.file = file;
-        animatedGifEncoder = new AnimatedGifEncoder();
-        animatedGifEncoder.setDelay(500);
+        gifEncoder = new AnimatedGifEncoder();
+        gifEncoder.setDelay(500);
     }
 
     @Override
     public void process(BufferedImage image, Map<String, String> requestData) {
-        if (!animatedGifEncoder.isStarted()) {
-            animatedGifEncoder.start(file.getAbsolutePath());
+        if (!gifEncoder.isStarted()) {
+            gifEncoder.start(file.getAbsolutePath());
         }
-        animatedGifEncoder.addFrame(image);
+        gifEncoder.addFrame(image);
     }
 
     @Override
     public void finish() {
-        animatedGifEncoder.finish();
+        gifEncoder.finish();
     }
 
 }
