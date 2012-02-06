@@ -7,7 +7,7 @@
     </parent>
     <groupId>com.github.rtyley</groupId>
     <artifactId>android-screenshot-parent</artifactId>
-    <version>1.4</version>
+    <version>1.5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>paparazzo</module>
