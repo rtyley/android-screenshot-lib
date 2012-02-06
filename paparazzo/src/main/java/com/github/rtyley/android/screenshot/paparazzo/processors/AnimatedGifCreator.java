@@ -14,6 +14,7 @@ public class AnimatedGifCreator implements ScreenshotProcessor {
         this.file = file;
         gifEncoder = new AnimatedGifEncoder();
         gifEncoder.setDelay(500);
+        gifEncoder.setRepeat(0);
     }
 
     @Override
