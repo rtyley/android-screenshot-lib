@@ -1,14 +1,12 @@
 package com.github.rtyley.android.screenshot.paparazzo.processors;
 
-import static java.lang.String.format;
-import static java.lang.System.currentTimeMillis;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.text.NumberFormat;
 import java.util.Map;
+
+import static java.lang.String.format;
 
 public class ImageSaver implements ScreenshotProcessor {
 
@@ -21,7 +19,7 @@ public class ImageSaver implements ScreenshotProcessor {
 
     @Override
     public void process(BufferedImage image, Map<String, String> request) {
-        String name=request.containsKey("name")?request.get("name"):format("%04d", screenshotCount++);
+        String name = request.containsKey("name") ? request.get("name") : format("%04d", screenshotCount++);
 
         File screenshotFile = new File(screenshotDirectory, name + ".png");
         try {

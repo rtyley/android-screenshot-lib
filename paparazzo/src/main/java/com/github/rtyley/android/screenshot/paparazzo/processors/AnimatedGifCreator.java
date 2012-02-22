@@ -1,6 +1,7 @@
 package com.github.rtyley.android.screenshot.paparazzo.processors;
 
 import com.madgag.gif.fmsware.AnimatedGifEncoder;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Map;
