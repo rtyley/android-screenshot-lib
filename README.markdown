@@ -1,5 +1,7 @@
 # Android Screenshot library
 
+A library intended to provide on-demand screenshots during Android integration tests.
+
 ## Usage
 
 Update your Android integration tests with `poseForScreenshot()` calls wherever you want a screenshot taken.
