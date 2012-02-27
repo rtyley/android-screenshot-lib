@@ -1,6 +1,6 @@
 # Android Screenshot library
 
-A library intended to provide on-demand screenshots during Android integration tests.
+**On-demand screenshots during Android integration tests**
 
 This framework uses ddmlib to capture screenshots from your device, and addresses some issues around 
 taking screenshots with ddmlib:
@@ -50,3 +50,12 @@ effect - you're just writing log messages - but no screenshots will be taken.
 The [android-maven plugin](http://code.google.com/p/maven-android-plugin/) will include
 support for `android-screenshot-lib` as of [v3.1.2](http://code.google.com/p/maven-android-plugin/wiki/Changelog#Android_Maven_Plugin_3.1.2),
 capturing screenshots during the integration-tests step. _([pull-request 104](https://github.com/jayway/maven-android-plugin/pull/104))_
+
+## Not to be confused with...
+
+[android-screenshot-library](http://code.google.com/p/android-screenshot-library/wiki/Usage) hosted on Google Code.
+Despite the names being very similar (apologies for that) this is a different library that takes a different
+non-ddmlib-based approach. It requires [slightly more intrusive changes](http://code.google.com/p/android-screenshot-library/wiki/DeveloperGuide)
+to your app. 
+
+
