@@ -31,8 +31,8 @@ public class Screenshots {
          */
         Log.d(TAG, "{"+keyValueString+"}");
 
-        /* Wait for the development machine to take the screenshot (usually takes about
-         * half a second)
+        /* Wait for the development machine to take the screenshot (can take about
+         * 900ms)
          */
         try { sleep(1000L); } catch (InterruptedException e) {}
     }
