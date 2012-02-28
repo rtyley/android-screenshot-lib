@@ -12,6 +12,8 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class OnDemandScreenshotService {
 
@@ -124,19 +126,27 @@ public class OnDemandScreenshotService {
         }
     }
 
+    private static final Pattern KEY_VALUE_HOLDER_PATTERN = Pattern.compile("\\{(.*)\\}$");
+
     /**
      * Parse the logline into key-value pairs. The logline format is comma-separated
      * key-value pairs surrounded by curly braces, ie:
      *
      * {foo=bar,name=ARandomName}
+     *
+     * The logline can also be prefixed with data like '02-28 11:37:49.629 D/screenshot_request(26711): '
+     * depending on what you pass to the '-v' logcat option
      */
     static Map<String, String> keyValueMapFor(String logLine) {
         Map<String, String> keyValueMap = new HashMap<String, String>();
-        if (logLine.startsWith("{") && logLine.endsWith("}")) {
-            for (String keyValuePair : logLine.substring(1, logLine.length()-1).split(",")) {
+        Matcher matcher = KEY_VALUE_HOLDER_PATTERN.matcher(logLine);
+        if (matcher.find()) {
+            for (String keyValuePair : matcher.group(1).split(",")) {
                 int separatorIndex = keyValuePair.indexOf("=");
                 if (separatorIndex > 0) {
-                    keyValueMap.put(keyValuePair.substring(0, separatorIndex), keyValuePair.substring(separatorIndex+1));
+                    String key = keyValuePair.substring(0, separatorIndex);
+                    String value = keyValuePair.substring(separatorIndex + 1);
+                    keyValueMap.put(key, value);
                 }
             }
         }
